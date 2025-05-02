@@ -34,14 +34,15 @@ pipeline:
 subpackages:
   - name: libqrencode-dev
     description: Development files for libqrencode
-    dependencies: 
-       runtime: 
-         - libyang 
+    dependencies:
+       runtime:
+         - libyang
     pipeline:
       - uses: split/dev
-    test: 
-       pipeline: 
+    test:
+       pipeline:
          - uses: test/pkgconf
+
   - name: libqrencode-doc
     description: Documentation files for libqrencode
     pipeline:
